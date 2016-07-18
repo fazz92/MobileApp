@@ -1,0 +1,164 @@
+<!--#include virtual="../../../pageComponents/baseLayoutPage/document-header.html" -->
+
+  <title>Pattern Library - Video</title>
+
+  <!-- Begin Global Styles -->
+  <link rel="stylesheet" href="../../library/css/mgmGrand/global/index.css">
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
+  <!-- END Global Styles -->
+
+  <!-- Begin Local Styles -->
+  <style type="text/css" media="screen">
+  
+    #standardVideo {
+      max-width: 75%;
+      min-height: 200px;
+      border: 1px solid black;
+      margin-bottom: 10px;
+    }
+    .demo {
+      margin:0 10px;
+    }
+
+    pre {
+      background-color: #DDD;
+      padding: 10px;
+    }
+    #hiddenControlsVideo .s7socialshare, 
+    #hiddenControlsVideo .s7controlbar, 
+    #hiddenControlsVideo .s7iconeffect {
+        display: none;
+    }
+  </style>
+
+
+  <!-- END Local Styles -->
+
+  <!--#include virtual="../../../pageComponents/baseLayoutPage/global-scripts-head.html" -->
+
+</head>
+<body>
+
+  <div class="demo">
+  <h1>Video Example</h1>
+    <div id="standardVideo">
+    
+    </div>
+    <p>
+    Video is created through the use of scene7's video library. The s7video function is imported through requirejs with the url path "vendor/s7video".
+
+    The video function is passed an object that requires 3 main parameters, outlined below.
+    </p>
+    <pre>
+new s7video( {
+    containerId : [STRING - Element Id of wrapper container],
+    params : [OBJECT - a list of player parameters, including the video source],
+    handlers : {
+        trackEvent : [FUNCTION - event callback function, fires for any video event]
+    }
+});</pre>
+    <p>
+      The code to load the example videos can be found at <a href="./js/mediators/video.js">./js/mediators/video.js</a>, within the pattern-library.
+    </p>
+
+    All controls are styled through CSS. Information on how to style individual controls can be found on Adobe's reference pages.
+    <br/>
+    <a href="http://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/c_html5_video_viewer_20_customizingviewer.html">Customizing HTML5 Video Viewer</a>
+    
+    <h2>Hiding Controls &amp; Looping Video</h2>
+
+    <div id="hiddenControlsVideo">
+    
+    </div>
+    <p>Controls are hidden through CSS. Below are the 3 classes that need to be hidden to remove control elements </p>
+    <pre>
+.s7socialshare, .s7controlbar, .s7iconeffect {
+    display: none;
+}</pre>
+    <p> In order to loop the video, you can watch for the MILESTONE callback event to fire with a value of 100. Then seek to the beginning and replay. Always fire video player events out of the event callback in order to stop possible event stacking situations.</p>
+<pre>
+loopEventFunction = function( elContainer,el,elObj,timeStamp,eventString ) {
+  
+  var eventInfo = eventString.split(',');
+
+  if( eventInfo[ 0 ] === 'MILESTONE' && eventInfo[ 1 ] === '100' ) {
+  
+    setTimeout( function() {
+  
+      loopVideo.videoplayer.seek(0);
+      loopVideo.videoplayer.play();
+  
+    }, 0);
+
+  } 
+}</pre>
+  
+  <p>More information can be found on Adobe's reference pages for the <a href="http://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/c_html5_video_reference.html">HTML5 Video Viewer</a></p>
+  </div>
+<script type="text/javascript">
+  /*
+   Set global dependency exclusion for template mediators.
+   Global dependencies are included in `mediators/common.js.`
+   Variable used in require.modules compile array.
+  */
+  var globalExcludes = [
+      'jquery',
+      'mediators/common',
+      'modules/global-vps',
+      'vendor/angular-custom',
+      'vendor/picturefill'
+  ];
+
+  var require = {
+
+      // This is the main path to which our modules are relative.
+      baseUrl: 'js',
+
+      // Paths are relative to `baseUrl`.
+      paths: {
+        'vendor/s7video': 'http://s7d1.scene7.com/s7viewers/html5/js/VideoViewer'
+      },
+
+      shim: {
+        // S7 VideoViewer does not implement AMD.
+        'vendor/s7video': {
+            exports: 's7viewers.VideoViewer'
+        }
+      },
+
+      /*
+       An array of dependencies to load. Useful when require is defined as
+       a config object before require.js is loaded, and you want to specify
+       dependencies to load as soon as require() is defined. Using deps is
+       just like doing a require([]) call, but done as soon as the loader
+       has processed the configuration. It does not block any other require()
+       calls from starting their requests for modules, it is just a way to
+       specify some modules to load asynchronously as part of a config block.
+       http://requirejs.org/docs/api.html#config-deps
+      */
+      // deps: [ 'mediators/common' ],
+
+
+      /*
+       Add modules to compile here with their respective includes/excludes.
+       Referenced in both RequireJS and Uglify Grunt files.
+      */
+      modules: [
+          {
+              name: 'mediators/home',
+              exclude: globalExcludes
+          },
+          {
+              name: 'mediators/common',
+              include: [
+                  'modules/global-vps',
+                  'vendor/angular-custom'
+              ]
+          }
+      ],
+
+  };
+</script>
+<script src="js/vendor/require.js" data-main="mediators/video"></script>
+</body>
+</html>

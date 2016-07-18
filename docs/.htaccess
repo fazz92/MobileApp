@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule (.*) $1 [L]
+
+RewriteCond %{QUERY_STRING} !^include
+RewriteRule \.md$ template.html [L]
+
+</IfModule>

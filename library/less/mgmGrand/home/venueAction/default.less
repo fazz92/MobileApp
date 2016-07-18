@@ -1,0 +1,67 @@
+.venue-action{
+    background: @white;
+    padding: 9px 9px 0;
+    &:after {
+        box-shadow: 0 0.5px 0 @gray;
+        content: '';
+        display:block;
+        height: 1px;
+        margin: 1px -9px;
+    }
+    h2{
+        color: @brand-primary-color;
+        .fonts( 22 );
+        margin: 0 0 1px;
+        font-family: @font-locator-ul;
+    }
+    h6{
+        color: @gray;
+        .fonts( 11 );
+        margin: 0 0 10px;
+        font-family: @font-lato-m;
+        text-transform: uppercase;
+    }
+    .venue-action-links{
+        .parsys{
+            display: none;
+        }
+        .clearfix();
+        margin: 0;
+        padding: 0 0 6px;
+        list-style-type: none;
+        &:before {
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%225%22%20height%3D%222%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3ELine%20Copy%3C%2Ftitle%3E%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%3Cpath%20d%3D%22M0%201h6%22%20stroke%3D%22%23ccc%22%20stroke-width%3D%22.5%22%20stroke-linecap%3D%22square%22%20stroke-dasharray%3D%221%2C1%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E');
+            content: '';
+            display:block;
+            height: 1px;
+            background-repeat: repeat-x;
+            margin: 0 0 10px;
+        }
+        li {
+            float: left;
+            width: 25%;
+            text-align: center;
+            a {
+                color: @gray;
+                .fonts( 10 );
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: @font-locator-m;
+                position: relative;
+                padding-top: 40px;
+                display: block;
+                &:before{
+                    width: 35px;
+                    background-size: contain;
+                    padding-top: 35px;
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    margin: 0;
+                    .translateX(-50%);
+                }
+            }
+        }  
+    }
+}

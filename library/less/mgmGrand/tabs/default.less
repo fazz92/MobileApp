@@ -1,0 +1,40 @@
+/* Tabs Styling */
+.global-tabs{
+	.tab-nav{
+	    background: @white;
+	}
+	.tab-item{
+		text-transform: uppercase;
+		&.tab-item-active{
+			color: @brand-primary-color;
+			position: relative;
+
+			&:after{
+			    height: 3px;
+			    min-width: 50px;
+			    position: absolute;
+			    bottom: 0;
+			    left: 50%;
+			    background-color: @brand-primary-color;
+			    content: '';
+			    display: block;
+			    .translateX(-50%);			    
+			}
+		}
+
+		.icon{
+			height: 25px;
+			width: 25px;
+
+			&.mgm-icon-mlife{
+				width: 42px;
+			}
+
+			&.active{
+				&:before{
+					background-position: 50% 100%;
+				}
+			}
+		}
+	}
+}

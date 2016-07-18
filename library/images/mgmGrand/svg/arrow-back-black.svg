@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="10px" height="15px" viewBox="0 0 10 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Chevron 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Detail-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Detail-Page-Layout-(Hotel)" sketch:type="MSArtboardGroup" transform="translate(-15.000000, -36.000000)" fill="#666666">
+            <g id="Detail-Header" sketch:type="MSLayerGroup" transform="translate(0.000000, 20.000000)">
+                <path d="M24.75,23.5191427 L17.0235612,31 L15.2359985,29.1932909 L21.1742468,23.4431795 L15,17.8449945 L16.905562,16 L24.75,23.5191427 L24.75,23.5191427 Z" id="Chevron-3" sketch:type="MSShapeGroup" transform="translate(19.875000, 23.500000) rotate(-180.000000) translate(-19.875000, -23.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

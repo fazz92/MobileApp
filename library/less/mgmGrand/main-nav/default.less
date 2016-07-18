@@ -1,0 +1,30 @@
+.main-nav{
+	.item{
+		padding: 9px 60px;
+		line-height: 24px;
+	    border-right: none;
+    	border-left: none;
+    	color: @brand-primary-color;
+    	.fonts( 16 );
+    	.item-content{
+    		position: static;
+    		padding: 0px;
+    	}
+	}
+
+	.item-icon-left, .item-icon-right{
+		.icon{
+			left: 0px;
+			&:before{
+    			width: 50px;
+    			background-position: 50% 95%;
+			}
+			&.right-icon{
+				&:before{
+					width: 10px;
+					height: 14px;
+				}
+			}
+		}
+	}
+}

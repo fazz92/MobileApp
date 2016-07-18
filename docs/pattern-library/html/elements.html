@@ -1,0 +1,149 @@
+<div class="pattern-section" id="elements">
+  <div class="pattern-nav">
+    <ul>
+        <li><a href="#elements">.center-center()</a></li>
+        <li><a href="#rounded">.rounded-box()</a></li>
+        <li><a href="#picturefill">picturefill</a></li>
+    </ul>
+  </div>
+  <h1>Mixins</h1>
+  <div class="pattern-element">
+    <h2>Vertically &amp; Horizontally Centered Elements</h2>
+    <div class="pattern-example">
+      <h4>Example</h4>
+      <h4>Without <pre style="display:inline;">overflow:hidden;</pre> on parent</h4>
+      <div class="center-center">
+          <img src="http://placehold.it/450x200" />
+          <div class="center-outline">25% x 215px</div>
+      </div>
+      <h4>With <pre style="display:inline;">overflow:hidden;</pre> on parent (expected result)</h4>
+      <div class="center-center" style="overflow:hidden; border:1px solid #BDA770">
+          <img src="http://placehold.it/450x200" />
+      </div>
+    </div>
+    <div class="pattern-code">
+                  <h4>Mixin</h4>
+                  <pre>.center-center();</pre>
+                  <p><b>Note:</b> Need to add two properties to centered element's parent</p>
+                  <pre>position:relative;
+      overflow:hidden;</pre>
+    </div>
+  </div>
+  <div class="pattern-element" id="rounded">
+    <h2>Rounded, Shadowed Boxes</h2>
+    <div class="pattern-example">
+      <h4>Result</h4>
+      <div class="rounded-box">
+      </div>
+    </div>
+    <div class="pattern-code">
+      <h4>Mixin</h4>
+      <pre>.rounded-box();</pre>
+      <p><b>Note:</b> Does not take care of padding</p>
+    </div>
+  </div>
+  <div class="pattern-element pattern-full" id="picturefill">
+    <h2>Picturefill</h2>
+    <div class="pattern-example">
+         <h4>With Retina Sizing</h4>
+         <pre>
+              &lt;span data-picture data-alt=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit&quot; class=&quot;tile-img&quot;&gt;
+                &lt;span data-src=&quot;http://placehold.it/450x520&quot;&gt;&lt;/span&gt;
+                &lt;span data-src=&quot;http://placehold.it/900x1040&quot;
+                      data-media=&quot;(-webkit-min-device-pixel-ratio:2),
+                                  (min--moz-device-pixel-ratio:2),
+                                  (-o-min-device-pixel-ratio:2/1),
+                                  (min-device-pixel-ratio:2),
+                                  (min-resolution:192dpi),
+                                  (min-resolution:2dppx)&quot;&gt;&lt;/span&gt;
+                &lt;span data-src=&quot;http://placehold.it/768x384&quot; data-media=&quot;(min-width: 745px)&quot;&gt;&lt;/span&gt;
+                &lt;span data-src=&quot;http://placehold.it/1536x768&quot;
+                      data-media=&quot;(min-width: 745px) and (-webkit-min-device-pixel-ratio:2),
+                                  (min-width: 745px) and (min--moz-device-pixel-ratio:2),
+                                  (min-width: 745px) and (-o-min-device-pixel-ratio:2/1),
+                                  (min-width: 745px) and (min-device-pixel-ratio:2),
+                                  (min-width: 745px) and (min-resolution:192dpi),
+                                  (min-width: 745px) and (min-resolution:2dppx)&quot;&gt;&lt;/span&gt;
+                &lt;span data-src=&quot;http://placehold.it/1024x440&quot; data-media=&quot;(min-width: 925px)&quot;&gt;&lt;/span&gt;
+                &lt;span data-src=&quot;http://placehold.it/2048x880&quot;
+                      data-media=&quot;(min-width: 925px) and (-webkit-min-device-pixel-ratio:2),
+                                  (min-width: 925px) and (min--moz-device-pixel-ratio:2),
+                                  (min-width: 925px) and (-o-min-device-pixel-ratio:2/1),
+                                  (min-width: 925px) and (min-device-pixel-ratio:2),
+                                  (min-width: 925px) and (min-resolution:192dpi),
+                                  (min-width: 925px) and (min-resolution:2dppx)&quot;&gt;&lt;/span&gt;
+                &lt;span data-src=&quot;http://placehold.it/1440x550&quot; data-media=&quot;(min-width: 1153px)&quot;&gt;&lt;/span&gt;
+                &lt;span data-src=&quot;http://placehold.it/2880x1100&quot;
+                      data-media=&quot;(min-width: 1153px) and (-webkit-min-device-pixel-ratio:2),
+                                  (min-width: 1153px) and (min--moz-device-pixel-ratio:2),
+                                  (min-width: 1153px) and (-o-min-device-pixel-ratio:2/1),
+                                  (min-width: 1153px) and (min-device-pixel-ratio:2),
+                                  (min-width: 1153px) and (min-resolution:192dpi),
+                                  (min-width: 1153px) and (min-resolution:2dppx)&quot;&gt;&lt;/span&gt;
+                &lt;noscript&gt;
+                  &lt;img src=&quot;http://placehold.it/1440x550&quot; alt=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit&quot; width=&quot;2880&quot;&gt;
+                &lt;/noscript&gt;
+              &lt;/span&gt;
+            </pre>
+            <h4>AngularJS implementation of Picturefill</h4>
+            <pre>
+              &lt;span picture-fill data-alt=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit&quot; class=&quot;tile-img&quot;&gt;
+                &lt;span pf-src=&quot;http://placehold.it/450x520&quot;&gt;&lt;/span&gt;
+                &lt;span pf-src=&quot;http://placehold.it/900x1040&quot;
+                      data-media=&quot;(-webkit-min-device-pixel-ratio:2),
+                                  (min--moz-device-pixel-ratio:2),
+                                  (-o-min-device-pixel-ratio:2/1),
+                                  (min-device-pixel-ratio:2),
+                                  (min-resolution:192dpi),
+                                  (min-resolution:2dppx)&quot;&gt;&lt;/span&gt;
+                &lt;span pf-src=&quot;http://placehold.it/768x384&quot; data-media=&quot;(min-width: 745px)&quot;&gt;&lt;/span&gt;
+                &lt;span pf-src=&quot;http://placehold.it/1536x768&quot;
+                      data-media=&quot;(min-width: 745px) and (-webkit-min-device-pixel-ratio:2),
+                                  (min-width: 745px) and (min--moz-device-pixel-ratio:2),
+                                  (min-width: 745px) and (-o-min-device-pixel-ratio:2/1),
+                                  (min-width: 745px) and (min-device-pixel-ratio:2),
+                                  (min-width: 745px) and (min-resolution:192dpi),
+                                  (min-width: 745px) and (min-resolution:2dppx)&quot;&gt;&lt;/span&gt;
+                &lt;span pf-src=&quot;http://placehold.it/1024x440&quot; data-media=&quot;(min-width: 925px)&quot;&gt;&lt;/span&gt;
+                &lt;span pf-src=&quot;http://placehold.it/2048x880&quot;
+                      data-media=&quot;(min-width: 925px) and (-webkit-min-device-pixel-ratio:2),
+                                  (min-width: 925px) and (min--moz-device-pixel-ratio:2),
+                                  (min-width: 925px) and (-o-min-device-pixel-ratio:2/1),
+                                  (min-width: 925px) and (min-device-pixel-ratio:2),
+                                  (min-width: 925px) and (min-resolution:192dpi),
+                                  (min-width: 925px) and (min-resolution:2dppx)&quot;&gt;&lt;/span&gt;
+                &lt;span pf-src=&quot;http://placehold.it/1440x550&quot; data-media=&quot;(min-width: 1153px)&quot;&gt;&lt;/span&gt;
+                &lt;span pf-src=&quot;http://placehold.it/2880x1100&quot;
+                      data-media=&quot;(min-width: 1153px) and (-webkit-min-device-pixel-ratio:2),
+                                  (min-width: 1153px) and (min--moz-device-pixel-ratio:2),
+                                  (min-width: 1153px) and (-o-min-device-pixel-ratio:2/1),
+                                  (min-width: 1153px) and (min-device-pixel-ratio:2),
+                                  (min-width: 1153px) and (min-resolution:192dpi),
+                                  (min-width: 1153px) and (min-resolution:2dppx)&quot;&gt;&lt;/span&gt;
+              &lt;/span&gt;
+            </pre>
+    </div>
+  </div>
+  <div class="pattern-element pattern-full">
+    <h2>Classes for hiding and showing elements based on viewport</h2>
+    <div class="pattern-example">
+      <h3>.s-hide</h3>
+      <p>Hides element in small viewport. Element is shown in medium, large and xlarge viewports.</p>
+      <h3>.m-hide</h3>
+      <p>Hides element in small and medium viewports. Element is shown large and xlarge viewports.</p>
+      <h3>.l-hide</h3>
+      <p>Hides element in large and xlarge viewports. Element in shown small in medium viewports.</p>
+      <h3>.s-show</h3>
+      <p>Shows element in small viewport only.</p>
+      
+      <div class="pattern-code">
+        <h4>Example</h4>
+        <p>Resize window to show/hide paragraphs.</p>
+        <p class="s-hide">.s-hide >> I hide in small viewport. I show in medium, large and x-large.</p>
+        <p class="m-hide">.m-hide >> I hide in small and medium viewports. I show in large and x-large.</p>
+        <p class="l-hide">.l-hide >> I hide in large and xlarge viewports. I show in small and medium.</p>
+        <p class="s-show">.s-show >> I hide in medium, large and xlarge viewports. I show only in small viewport.</p>
+      </div>
+    </div>
+  </div>
+</div>

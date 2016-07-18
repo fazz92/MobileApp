@@ -1,0 +1,25 @@
+.detail-footer{
+	background: @white;
+	width: 100%;
+	z-index: 110;
+	&.webkit-correction{
+		-webkit-transform: translate3d(0,0,0); 
+		transform: translate3d(0,0,0); 
+	}
+	.footer-btn{
+		text-align: center;
+		width: 100%;
+		border: 2px solid @brand-primary-dark;
+		background-color:@brand-primary-color;
+		height: 32px;
+		a{
+			text-decoration: none;
+			.fonts( 13 );
+			color: @white;
+			line-height: 28px;
+			display: block;
+			text-transform: uppercase;
+		}
+	}
+}
+

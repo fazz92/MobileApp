@@ -1,0 +1,31 @@
+<!--#include virtual="../../pageComponents/baseLayoutPage/document-header.html" -->
+
+  <title>Pattern Library - Home</title>
+  <!-- Begin Global Styles -->
+  <link rel="stylesheet" href="../../library/css/mgmGrand/global/index.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!--#include virtual="../../pageComponents/baseLayoutPage/global-scripts-head.html" -->
+</head>
+<body>
+<div class="pattern-library">
+  <nav>
+    <a href="index.html"><img src="img/logo.png" height="50px"></a>
+    <ul>
+      <li><a href="#colors">Colors</a></li>
+      <li><a href="#typography">Typograhy</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="pattern-window">
+  <!--#include virtual="html/colors.html"> -->
+  <!--#include virtual="html/typography.html"> -->
+</div>
+
+<script data-desc="RequireJS runtime configuration">
+  <!--#include virtual="js/config/require-config.js" -->
+</script>
+<script src="js/vendor/require.js" data-main="mediators/pattern-library"></script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px"
+	 viewBox="-298.5 379 35 35" enable-background="new -298.5 379 35 35" xml:space="preserve">
+<title>Share</title>
+<desc>Created with Sketch.</desc>
+<g id="Detail-Page" sketch:type="MSPage">
+	<g id="Detail-Page-Layout-_x28_Hotel_x29_" transform="translate(-176.000000, -339.000000)" sketch:type="MSArtboardGroup">
+		<g id="Venue-Info" transform="translate(0.000000, 63.000000)" sketch:type="MSLayerGroup">
+			<g id="Venue-Actions" transform="translate(91.000000, 275.000000)" sketch:type="MSShapeGroup">
+				<g id="Share" transform="translate(85.000000, 0.000000)">
+					<g id="icon---share" transform="translate(0.000000, 0.625000)">
+						<path id="Fill-1" fill="#999999" d="M-271.3,389.7h-19.9c-1,0-1.8,0.8-1.8,1.8v18.1c0,1,0.8,1.8,1.8,1.8h19.9
+							c1,0,1.8-0.8,1.8-1.8v-18.1C-269.5,390.5-270.3,389.7-271.3,389.7"/>
+						<path id="Fill-2" fill="#FFFFFF" d="M-272.2,391.5h-18.1c-0.5,0-0.9,0.4-0.9,0.9v16.3c0,0.5,0.4,0.9,0.9,0.9h18.1
+							c0.5,0,0.9-0.4,0.9-0.9v-16.3C-271.3,391.9-271.7,391.5-272.2,391.5"/>
+						<path id="Fill-3" fill="#FFFFFF" d="M-288.5,388.8h14.5v4.5h-14.5V388.8z"/>
+						<path id="Fill-4" fill="#999999" d="M-281.2,382.5c-0.5,0-0.9,0.4-0.9,0.9v19.9c0,0.5,0.4,0.9,0.9,0.9c0.5,0,0.9-0.4,0.9-0.9
+							v-19.9C-280.3,382.9-280.8,382.5-281.2,382.5"/>
+						<path id="Fill-5" fill="#999999" d="M-280.6,382.7c-0.3-0.3-0.9-0.3-1.2,0l-4.6,4.6c-0.3,0.3-0.3,0.9,0,1.2
+							c0.3,0.3,0.9,0.3,1.2,0l4.6-4.6C-280.3,383.6-280.3,383.1-280.6,382.7"/>
+						<path id="Fill-6" fill="#999999" d="M-276.1,387.3l-4.6-4.6c-0.3-0.3-0.9-0.3-1.2,0c-0.3,0.3-0.3,0.9,0,1.2l4.6,4.6
+							c0.3,0.3,0.9,0.3,1.2,0C-275.7,388.2-275.7,387.6-276.1,387.3"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

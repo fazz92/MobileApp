@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="23px" height="32px" viewBox="0 0 23 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>location</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Map---Null-Selected" sketch:type="MSArtboardGroup" transform="translate(-99.000000, -205.000000)" stroke="#FFFFFF" fill="#BDA770">
+            <path d="M110.2,220.081633 C112.1878,220.081633 113.8,218.437143 113.8,216.408163 C113.8,214.379796 112.1878,212.734694 110.2,212.734694 C108.2116,212.734694 106.6,214.379796 106.6,216.408163 C106.6,218.437143 108.2116,220.081633 110.2,220.081633 L110.2,220.081633 Z M110.2,235.292857 C112.6246,235.292857 120.4,222.156531 120.4,216.408163 C120.4,210.660408 115.8334,206 110.2,206 C104.5666,206 100,210.660408 100,216.408163 C100,222.156531 107.7748,235.292857 110.2,235.292857 L110.2,235.292857 Z" id="location" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

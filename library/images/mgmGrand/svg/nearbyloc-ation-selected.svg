@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="26px" height="40px" viewBox="0 0 26 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>location selected</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Map---Selected-CTA" sketch:type="MSArtboardGroup" transform="translate(-94.000000, -203.000000)">
+            <g id="location-selected" sketch:type="MSLayerGroup" transform="translate(94.000000, 203.000000)">
+                <ellipse id="Oval-43" stroke="#666666" fill="#FFFFFF" sketch:type="MSShapeGroup" cx="12.8888889" cy="35" rx="8.88888889" ry="4"></ellipse>
+                <path d="M12.9209492,17.1300472 C15.3727971,17.1300472 17.361362,15.1715991 17.361362,12.7552563 C17.361362,10.3396425 15.3727971,8.38046535 12.9209492,8.38046535 C10.4683612,8.38046535 8.48053645,10.3396425 8.48053645,12.7552563 C8.48053645,15.1715991 10.4683612,17.1300472 12.9209492,17.1300472 L12.9209492,17.1300472 Z M12.9209492,35.2453271 C15.9115672,35.2453271 25.5021187,19.6010749 25.5021187,12.7552563 C25.5021187,5.91016676 19.8694551,0.360015369 12.9209492,0.360015369 C5.9724433,0.360015369 0.339779713,5.91016676 0.339779713,12.7552563 C0.339779713,19.6010749 9.92959114,35.2453271 12.9209492,35.2453271 L12.9209492,35.2453271 Z" id="Imported-Layers-8" fill="#666666" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

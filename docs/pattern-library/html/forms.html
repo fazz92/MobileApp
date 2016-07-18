@@ -1,0 +1,215 @@
+<div class="pattern-section" id="forms">
+  
+  <div class="pattern-element pattern-full">
+  
+    <h1>Forms</h1>
+  
+    <form id="form-one" action="#" method="post" enctype="multipart/form-data" class="grid">
+    
+      <fieldset id="personal-info">
+        
+        <legend class="fieldset-title">Fieldset Legend</legend>
+        
+        <p class="fieldset-direction">This is a fieldset-direction element Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        
+        <p><span class="input-required-mark">*</span>required (fieldset legend element)</p>
+        
+        <hr class="fieldset-hr"/>
+        
+        <div class="input-step field grid-item m-1-2">
+          <label for="first-name">First name</label>
+          <input type="text" name="first-name" value="" id="first-name" required/>
+        </div>
+        
+        <div class="input-step field grid-item m-1-2">
+          <label for="last-name">Last name</label>
+          <input type="text" name="last-name" value="" id="last-name" required/>
+        </div>
+        
+        <div class="input-step multi" id="step-metrics">
+          <div class="field grid-item m-1-2" id="field-gender">
+            <label for="gender">Gender</label>
+            <div class="field-select">
+              <select name="gender" id="gender">
+                <option value="">Please select Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</option>
+                <option value="female">female</option>
+                <option value="male">male</option>
+                <option value="?">don't know...</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="field grid-item m-1-2" id="field-height">
+            <label for="height">height</label>
+            <input type="text" name="height" value="" id="height"/>
+          </div>
+          
+          <div class="field grid-item m-1-2">
+            <label for="age">Age</label> <span class="input-direction">(input-direction element)</span>
+            <input type="text" name="age" value="" id="age"/>
+          </div>
+          
+        </div>
+        
+        <div class="input-step grid-item">
+          
+          <div id="field-zip" class="field">
+            <label for="zip">Zip</label>
+            <input type="text" name="zip" id="zip" />
+          </div>
+          
+          <div id="field-state" class="field">
+            <label for="state">State</label>
+            <div class="field-select">
+              <select name="state" id="state">
+                <option value="">Select a State</option>
+                <option value="0">CA</option>
+                <option value="1">IN</option>
+              </select>
+            </div>
+          </div>
+          
+          <span class="field-relation">or</span>
+          
+          <div id="field-region" class="field">
+            <label for="region">Region</label>
+            <input type="text" name="region" id="region" />
+          </div>
+        </div>
+        
+        <div class="input-step field">
+          <label for="comment">Comment</label>
+          <textarea name="comment" id="comment" required></textarea>
+          <span class="input-direction">(input-direction element)</span>
+        </div>
+        
+        <hr class="fieldset-hr"/>
+        
+      </fieldset>
+    
+      <fieldset id="preferences">
+        <legend class="fieldset-title">Fieldset Title.</legend>
+        <p class="fieldset-direction">This is a fieldset-direction element Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <hr class="fieldset-hr"/>
+        <div class="input-step group" id="step-contact-preference">
+          <h4 class="group-title">contact preference.</h4>
+          <ul>
+            <li class="field">
+              <h5 class="field-label">telephone</h5>
+              <input type="radio" name="contact-preference" value="telephone" id="telephone"/>
+              <label for="telephone">lorem ipsum dolor sit amet, consectetur adipisicing elit.</label>
+            </li>
+            <li class="field">
+              <h5 class="field-label">email</h5>
+              <input type="radio" name="contact-preference" value="email" id="email"/>
+              <label for="email">lorem ipsum dolor sit amet, consectetur adipisicing elit.</label>
+            </li>
+            <li class="field">
+              <h5 class="field-label">usps</h5>
+              <input type="radio" name="contact-preference" value="usps" id="usps"/>
+              <label for="usps">lorem ipsum dolor sit amet, consectetur adipisicing elit.</label>
+            </li>
+            <li class="field">
+              <h5 class="field-label">yelling loudly</h5>
+              <input type="radio" name="contact-preference" value="yell" id="yell"/>
+              <label for="yell">lorem ipsum dolor sit amet, consectetur adipisicing elit.</label>
+            </li>
+          </ul>
+        </div>
+        <div class="input-step group" id="step-show-preference">
+          <h4 class="group-title">television preference.</h4>
+          <ul>
+            <li class="field">
+              <input type="radio" name="show-preference" value="evening" id="evening"/>
+              <label for="evening">evening label lorem ipsum dolor sit amet.</label>
+            </li>
+            <li class="field">
+              <input type="radio" name="show-preference" value="morning" id="morning"/>
+              <label for="morning">morning label lorem ipsum dolor sit amet.</label>
+            </li>
+            <li class="field">
+              <input type="radio" name="show-preference" value="afternoon" id="afternoon"/>
+              <label for="afternoon">afternoon label lorem ipsum dolor sit amet.</label>
+            </li>
+          </ul>
+        </div>
+        <div class="input-step field">
+          <h5 class="field-label">mailing list</h5>
+          <input type="checkbox" name="email-list" value="" id="email-list"/>
+          <label for="email-list">Sign up for our email list</label>
+        </div>
+        <div class="input-step group" id="step-computers">
+          <h4 class="group-title">computers owned.</h4>
+          <ul>
+            <li class="field">
+              <input type="checkbox" name="computers" value="desktop" id="desktop"/>
+              <label for="desktop">desktop</label>
+            </li>
+            <li class="field">
+              <input type="checkbox" name="computers" value="smartphone" id="smartphone"/>
+              <label for="smartphone">smartphone</label>
+            </li>
+            <li class="field">
+              <input type="checkbox" name="computers" value="laptop" id="laptop"/>
+              <label for="laptop">laptop</label>
+            </li>
+            <li class="field">
+              <input type="checkbox" name="computers" value="tablet" id="tablet"/>
+              <label for="tablet">tablet</label>
+              <span class="input-direction">(input-direction element)</span>
+            </li>
+          </ul>
+        </div>
+        <div class="input-step group" id="step-bikes">
+          <h4 class="group-title">bikes owned.</h4>
+          <ul>
+            <li class="field">
+              <input type="checkbox" name="computers" value="big" id="big"/>
+              <label for="big">Label big one lorem ipsum dolor sit amet.</label>
+            </li>
+            <li class="field">
+              <input type="checkbox" name="computers" value="little" id="little"/>
+              <label for="little">Label little one lorem ipsum dolor sit amet.</label>
+            </li>
+            <li class="field">
+              <input type="checkbox" name="computers" value="red" id="red"/>
+              <label for="red">Label red one lorem ipsum dolor sit amet.</label>
+            </li>
+            <li class="field">
+              <input type="checkbox" name="errorState" value="error" id="error" class="error"/>
+              <label for="error">Label error one lorem ipsum dolor sit amet.</label>
+              <label for="error">This is a checkbox error.</label>
+            </li>
+          </ul>
+        </div>
+        <hr class="fieldset-hr"/>
+      </fieldset>
+    
+      <fieldset id="avatar">
+        <legend class="fieldset-title">Fieldset Legend</legend>
+        <legend class="fieldset-title">Upload your Photo.</legend>
+        <p class="fieldset-direction">This is a fieldset-direction element Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <hr class="fieldset-hr"/>
+        <div class="input-step field">
+          <label for="upload">photo: <span class="input-direction">(input-direction element)</span></label>
+          <input type="file" name="upload" value="" id="upload"/>
+        </div>
+        <div class="input-step field">
+          <input type="checkbox" name="agree" value="" id="agree"/>
+          <label for="agree">If this text extends more than one line it will fall below the checkbox. A width on the label will make it float properly.</label>
+        </div>
+        <hr class="fieldset-hr"/>
+      </fieldset>
+    
+      <fieldset id="finish">
+        <legend class="fieldset-title">Fieldset Legend</legend>
+        <div class="input-step field">
+          <input class="submit" type="submit" value="Submit">
+        </div>
+      </fieldset>
+  
+    </form>
+  
+  </div>
+  
+</div>

@@ -1,0 +1,153 @@
+.borderbox() {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.drop-shadow(@arguments) {
+    box-shadow: @arguments;
+}
+.border-radius(@arguments) {
+    -webkit-border-radius: @arguments;
+    -moz-border-radius: @arguments;
+    border-radius: @arguments;
+}
+.rotate(@deg) {
+    -webkit-transform: ~"rotate(@{deg}deg)";
+    -moz-transform: ~"rotate(@{deg}deg)";
+    -ms-transform: ~"rotate(@{deg}deg)";
+    -o-transform: ~"rotate(@{deg}deg)";
+    transform: ~"rotate(@{deg}deg)";
+}
+.translate(@x, @y) {
+    -webkit-transform: ~"translate(@{x}, @{y})";
+    -moz-transform: ~"translate(@{x}, @{y})";
+    -ms-transform: ~"translate(@{x}, @{y})";
+    -o-transform: ~"translate(@{x}, @{y})";
+    transform: ~"translate(@{x}, @{y})";
+}
+.translateY(@y) {
+    -webkit-transform: ~"translateY(@{y})";
+    -moz-transform: ~"translateY(@{y})";
+    -ms-transform: ~"translateY(@{y})";
+    -o-transform: ~"translateY(@{y})";
+    transform: ~"translateY(@{y})";
+}
+.translateX(@y) {
+    -webkit-transform: ~"translateX(@{y})";
+    -moz-transform: ~"translateX(@{y})";
+    -ms-transform: ~"translateX(@{y})";
+    -o-transform: ~"translateX(@{y})";
+    transform: ~"translateX(@{y})";
+}
+.transform(@arguments){
+    -webkit-transform: @arguments;
+    -moz-transform: @arguments;
+    -ms-transform: @arguments;
+    -o-transform: @arguments;
+    transform: @arguments;
+}
+.fonts(@sizeValue) {
+    @remValue: (@sizeValue / 16);
+    @pxValue: @sizeValue;
+    font-size: ~"@{pxValue}px"; 
+    font-size: ~"@{remValue}rem";
+}
+.transition(...) {
+    @value: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+    -webkit-transition: @value;
+    -moz-transition: @value;
+    -o-transition: @value;
+    transition: @value;
+}
+.transition-delay(@arguments) {
+    -webkit-transition-delay: @arguments;
+    -moz-transition-delay: @arguments;
+    -o-transition-delay: @arguments;
+    transition-delay: @arguments;
+}
+.scale(@x, @y) {
+    -webkit-transform: ~"scale(@{x}, @{y})";
+    -moz-transform: ~"scale(@{x}, @{y})";
+    -ms-transform: ~"scale(@{x}, @{y})";
+    -o-transform: ~"scale(@{x}, @{y})";
+    transform: ~"scale(@{x}, @{y})";
+}
+
+/* usage: .radial-gradient(50%, 50%, circle, cover, #ffffff, 0%, #000000, 100%); 
+    https://github.com/commons/less/blob/master/mixins/gradients/radial-gradient.less
+*/
+
+.radial-gradient(@centerX: center, @centerY: center, @shape: circle, @size: contain, @startColor: #555, @startPos: 0, @endColor: #333, @endPos: 100%) {
+    background-color:@endColor;
+    background-image: -moz-radial-gradient(@centerX @centerY, @shape @size, @startColor @startPos, @endColor @endPos);
+    background-image: -webkit-gradient(radial, @centerX @centerY, @shape @size, @startColor @startPos, @endColor @endPos);
+    background-image: -webkit-radial-gradient(@centerX @centerY, @shape @size, @startColor @startPos, @endColor @endPos);
+    background-image: -o-radial-gradient(@centerX @centerY, @shape @size, @startColor @startPos, @endColor @endPos);
+    background-image: -ms-radial-gradient(@centerX @centerY, @shape @size, @startColor @startPos, @endColor @endPos);
+    background-image: radial-gradient(@shape at @centerX @centerY, @startColor @startPos, @endColor @endPos);
+}
+
+/*
+For centering an item, be sure to set its parent to
+
+    position:relative;
+    overflow:hidden;
+---------------------------*/
+.center-center() {
+    top:50%;
+    left:50%;
+    position:absolute;
+    .translate(-50%,-50%);
+}
+.vertical-middle() {
+    top:50%;
+    position:absolute;
+    .translateY(-50%);
+}
+.overflow-centered() {
+    left: 50%;
+    position: relative;
+    .translateX(-50%);
+}
+
+.clearfix() {
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+.stop-flicker() {
+    // Used to stop flicker when using css3 animations in webkit
+    // This preserves rounded borders, font sizes and stops other 
+    // rendering issues when a transform is being performed 
+    -webkit-transform-style: preserve-3d;
+}
+.remove-outlines() {
+    -webkit-outline: none;
+    -moz-outline: none;
+    -ms-outline: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.loading-img-extn {
+    .center-center();
+    position: fixed;
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: url(@loading-icon) no-repeat;
+    z-index: @index-loading-animation;
+}
+.height(@value){
+    height : ~"calc(100% - @{value})";
+    height : ~"-webkit-calc(100% - @{value})";
+}
+.width(@ref, @value){
+    width : ~"calc(@{ref} - @{value})";
+    width : ~"-webkit-calc(@{ref} - @{value})";
+}

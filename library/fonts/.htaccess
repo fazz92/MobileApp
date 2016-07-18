@@ -1,0 +1,38 @@
+# Font Protection
+
+# Set an env variable if the regex matches `Referer`
+# If the variable is not set the request fails
+# Syntax: `SetEnvIf Attribute Regex Variable_Name`
+
+# AWS IPs
+# http://54.241.241.N[NN]/
+# http://54.241.241.N[NN]:N[NNN]/
+SetEnvIf Referer ^http(s)?://(54\.241\.241)\.(\d)+(:(\d)+)?\/ fonts_whitelist
+
+# Sapient IPs
+# http://10.219.N[NN].N[NN]/
+# http://10.219.N[NN].N[NN]:N[NNN]/
+# http://10.209.N[NN].N[NN]/
+# http://10.209.N[NN].N[NN]:N[NNN]/
+# http://192.168.N[NN].N[NN]:N[NNN]/
+SetEnvIf Referer ^http(s)?://((10|192)\.(209|219|168))\.(\d)+\.(\d)+(:(\d)+)?\/ fonts_whitelist
+
+# Non-Top-Level Domains
+# http://anything/
+# http://anything:N[NNN]/
+SetEnvIf Referer ^http(s)?://(\w)*(:(\d)+)?\/ fonts_whitelist
+
+# Sapient Top-Level Domains
+# http://*.sapient.com/
+# http://*.sapientnitro.com/
+# http://*.sapientnitrola.com/
+SetEnvIf Referer ^http(s)?://(.*\.)*(sapient|sapientnitro|sapientnitrola)\.com\/ fonts_whitelist
+
+# MGM Top-Level Domains
+# http://*.mgm.com/
+# http://*.mgmgrand.com/
+SetEnvIf Referer ^http(s)?://(.*\.)*(mgm|mgmgrand)\.com\/ fonts_whitelist
+
+Order deny,allow
+Deny from all
+Allow from env=fonts_whitelist

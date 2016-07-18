@@ -1,0 +1,214 @@
+<div class="pattern-section" id="grid">
+  <div class="pattern-nav">
+    <ul>
+      <li><a href="#grid">.grid</a></li>
+      <li><a href="#grid-gutter">.grid-gutter</a></li>
+      <li><a href="#section-wrapper">.section-wrapper</a></li>
+    </ul>
+  </div>
+  <h1>Grid</h1>
+  <div class="pattern-element pattern-full">
+    <h2>Default</h2>
+    <p>See <a href="../architecture/html/grids.md">here</a> for naming details for the grid</p>
+    <div class="pattern-example wrapper">
+      <h4>Example</h4>
+      <div class="grid">
+        <div class="grid-item">
+          <p>Default</p>
+        </div>
+      </div>
+      <div class="grid width-1">
+        <div class="grid-item width-1-2">
+          <p class="odd">.width-1-2</p>
+        </div>
+        <div class="grid-item width-1-2">
+          <p>.width-1-2</p>
+        </div>
+      </div>
+      <div class="grid width-1">
+        <div class="grid-item width-1-3">
+          <p class="odd">.width-1-3</p>
+        </div>
+        <div class="grid-item width-2-3">
+          <p>.width-2-3</p>
+        </div>
+      </div>
+      <div class="grid width-1">
+        <div class="grid-item width-1-5">
+          <p class="odd">.width-1-5</p>
+        </div>
+        <div class="grid-item width-1-5">
+          <p>.width-1-5</p>
+        </div>
+        <div class="grid-item width-1-5">
+          <p class="odd">.width-1-5</p>
+        </div>
+        <div class="grid-item width-1-5">
+          <p>.width-1-5</p>
+        </div>
+        <div class="grid-item width-1-5">
+          <p class="odd">.width-1-5</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="grid-item width-1-10">
+          <p class="odd">.width-1-10</p>
+        </div>
+        <div class="grid-item width-3-10">
+          <p>.width-3-10</p>
+        </div>
+        <div class="grid-item width-1-10">
+          <p class="odd">.width-1-10</p>
+        </div>
+        <div class="grid-item width-3-10">
+          <p>.width-3-10</p>
+        </div>
+        <div class="grid-item width-1-10">
+          <p class="odd">.width-1-10</p>
+        </div>
+        <div class="grid-item width-1-10">
+          <p>.width-1-10</p>
+        </div>
+      </div>
+    </div>
+    <div class="pattern-code">
+      <h4>HTML</h4>
+      <pre>
+&lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;grid-item width-1-2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-item width-1-2&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+    </div>
+  </div>
+  
+  <div class="pattern-element pattern-full" id="grid-gutter">
+    <h2>Guttered</h2>
+    <div class="pattern-example wrapper">
+      <h4>Example</h4>
+      <div class="grid-gutter">
+        <div class="grid-item width-1-4">
+          <p class="odd">.width-1-4</p>
+        </div>
+        <div class="grid-item width-1-4">
+          <p>.width-1-4</p>
+        </div>
+        <div class="grid-item width-1-4">
+          <p class="odd">.width-1-4</p>
+        </div>
+        <div class="grid-item width-1-4">
+          <p>.width-1-4</p>
+        </div>
+      </div>
+      <div class="grid-gutter">
+        <div class="grid-item width-1-8">
+          <p class="odd">.width-1-8</p>
+        </div>
+        <div class="grid-item width-1-8">
+          <p>.width-1-8</p>
+        </div>
+        <div class="grid-item width-1-8">
+          <p class="odd">.width-1-8</p>
+        </div>
+        <div class="grid-item width-1-8">
+          <p>.width-1-8</p>
+        </div>
+        <div class="grid-item width-1-8">
+          <p>.width-1-8</p>
+        </div>
+        <div class="grid-item width-1-8">
+          <p>.width-1-8</p>
+        </div>
+        <div class="grid-item width-1-8">
+          <p>.width-1-8</p>
+        </div>
+        <div class="grid-item width-1-8">
+          <p>.width-1-8</p>
+        </div>
+      </div>
+    </div>
+    <div class="pattern-code">
+      <h4>HTML</h4>
+      <pre>
+&lt;div class=&quot;grid-gutter&quot;&gt;
+    &lt;div class=&quot;grid-item width-1-4&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-item width-1-4&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-item width-1-4&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-item width-1-4&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+    </div>
+  </div>
+  
+  <div class="pattern-element pattern-full" id="section-wrapper">
+    <h2>Section Grids</h2>
+    
+    <div class="pattern-example">
+      <h4>Example: <code>section-wrapper grid</code></h4>
+      <div class="section-wrapper grid">
+        <div class="grid-item width-3-4">
+          <p> </p>
+        </div>
+        <div class="grid-item width-1-4">
+          <p> </p>
+        </div>
+        <div class="grid-item">
+          <p> </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pattern-example">
+      <h4>Example: <code>section-wrapper grid-gutter</code></h4>
+      <div class="section-wrapper grid-gutter">
+        <div class="grid-item width-3-4">
+          <p> </p>
+        </div>
+        <div class="grid-item width-1-4">
+          <p> </p>
+        </div>
+        <div class="grid-item">
+          <p> </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pattern-example">
+      <h4>Example: <code>section-wrapper grid-gutter s-flush</code></h4>
+      <div class="section-wrapper grid-gutter s-flush">
+        <div class="grid-item width-3-4">
+          <p> </p>
+        </div>
+        <div class="grid-item width-1-4">
+          <p> </p>
+        </div>
+        <div class="grid-item">
+          <p> </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pattern-example">
+      <h4>Example: <code>section-wrapper grid-gutter s-flush</code></h4>
+      <div class="section-wrapper grid-gutter s-flush">
+        <div class="grid-item width-3-4">
+          <p> </p>
+        </div>
+        <div class="grid-item width-1-4">
+          <p> </p>
+        </div>
+        <div class="grid-item no-flush">
+          <p><strong>no-flush</strong></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pattern-code">
+      <h4>HTML</h4>
+      <pre>
+&lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;grid-item width-1-2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-item width-1-2&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+    </div>
+
+  </div>
+</div>

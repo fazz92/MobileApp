@@ -1,0 +1,347 @@
+/*
+RESET
+---------------------------*/
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*
+BASICS
+---------------------------*/
+.pattern-section h1 {
+    padding-left: 20px;
+}
+.pattern-section p {
+    padding-left: 20px;
+}
+.pattern-element {
+    padding: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: white;
+    border-top: 5px solid #BDA770;
+}
+.pattern-example,
+.pattern-code {
+    width: 50%;
+    float: left;
+    overflow: hidden;
+}
+.pattern-full .pattern-example,
+.pattern-full .pattern-code {
+    width: 100%;
+    float: none;
+}
+
+/*
+NAVIGATION
+---------------------------*/
+.pattern-library nav {
+    top:0;
+    left:0;
+    right:0;
+    margin:0;
+    padding:0;
+    width:100%;
+    position:fixed;
+    background:#eee;
+    border-bottom:1px solid #ddd;
+    border-top:2px solid #BDA770;
+}
+.pattern-library nav {
+    max-width:100%;
+}
+.pattern-library nav ul {
+    position: relative;
+}
+.pattern-library ul {
+    margin:0;
+    padding:0;
+    display:inline;
+    position:absolute;
+    vertical-align:bottom;
+}
+.pattern-library nav ul {
+    position: relative;
+}
+.pattern-library ul li,
+.pattern-nav ul li {
+    list-style: none;
+    display: inline-block;
+    float: left;
+}
+.pattern-library li a,
+.pattern-nav li a {
+    padding: 10px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+.pattern-library li a:hover {
+    background: #ddd;
+    color: black;
+}
+.pattern-library a {
+    display: inline-block;
+    float: left;
+}
+.pattern-library nav img {
+    padding-left: 15px;
+}
+.pattern-window {
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: scroll;
+    background: #eee;
+}
+@media all and (min-width:745px) {
+    .pattern-library ul {
+        position: relative;
+    }
+    .pattern-library li a {
+        padding: 20px 15px;
+    }
+
+}
+
+/*
+SUBNAV
+---------------------------*/
+.pattern-nav {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ddd;
+    border-bottom: 1px dotted #eee;
+    display: inline-block;
+}
+.pattern-nav ul {
+    margin: 0;
+    padding: 0;
+}
+.pattern-nav li a {
+    color: #666;
+    padding: 10px 10px;
+}
+.pattern-nav li a:hover {
+    background: #eee;
+}
+
+/*
+PATTERN CONTENT
+---------------------------*/
+.pattern-content {
+    padding: 10px 20px;
+}
+.html-block,
+.less-block {
+    width: 50%;
+    float: left;
+    display: inline-block;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/*
+FLOAT CLEARING
+---------------------------*/
+.code-block:after {
+    height: 0;
+    clear: both;
+    content: ".";
+    display: block;
+    visibility: hidden;
+}
+*+html .code-block {
+    zoom: 1;
+}
+pre {
+    padding-left: 10px;
+}
+.info-block {
+    overflow: hidden;
+}
+.pattern-element h2 {
+    border-top: 1px solid #BDA770;
+    padding-left:10px;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.pattern-element h4:first-child:not( .group-title ) {
+    background: #eee;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bbb;
+}
+
+/*
+PAGE SPECIFIC
+---------------------------*/
+#grid .grid p,
+#grid .grid-gutter p {
+    padding-left: 10px;
+    padding-top: 10px;
+    height: 75px;
+    background: rgba(0,0,0,0.2);
+    margin: 0;
+}
+#grid .grid-item {
+    background: rgba(255,0,0,0.5);
+}
+#grid .grid-item:nth-child(2n),
+#grid .grid-item:nth-child(2n) {
+    background: rgba(255,155,0,0.5);
+}
+#grid .grid-item:nth-child(3n) {
+    background: rgba(0,155,255, 0.5);
+}
+#grid .grid,
+#grid .grid-gutter {
+    background: rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+    .html-block,
+    .less-block {
+        width: 100%;
+    }
+}
+.greyed {
+    background: #eee;
+}
+
+/*
+grid-items modification for results grid
+---------------------------*/
+#results-offer-mod {
+    position: relative;
+}
+#results-med {
+    padding-right:237px;
+}
+#results-offer {
+    width:237px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#results-offer .results-offer {
+    width: 100%;
+}
+
+@media all and (min-width: 1025px) {
+    #results-med {
+        padding-right: 25%;
+    }
+    #results-offer {
+        width: 25%;
+    }
+
+}
+
+/*
+colors
+---------------------------*/
+.palette > div {
+    width: 150px;
+    padding: 50px 0px;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+.palette .lighter {
+    color: white;
+}
+
+/*
+borders
+---------------------------*/
+.borders-palette > div {
+    width: 300px;
+    padding: 50px 0px;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    background: #eee;
+}
+.borders-palette .darker {
+    background: #666;
+    color: #eee;
+}
+
+/*
+mixins
+---------------------------*/
+.center-center {
+    position: relative;
+    height:215px;
+    width: 25%;
+    z-index: 1;
+}
+.center-center img {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index:-1;
+}
+.center-outline {
+    color: #BDA770;
+    text-align: center;
+    padding-top: 20px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #BDA770;
+    background: rgba(255,255,255,0.4);
+}
+.rounded-box {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    background: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.15);
+}
+/*
+hide/show elements
+---------------------------*/
+.s-hide,
+.m-hide,
+.l-hide,
+.s-show {
+    margin: 0;
+    padding: 10px;
+}
+.s-hide {
+    background-color: rgba(255,0,0,0.5);
+}
+.m-hide {
+    background-color: rgba(255,155,0,0.5);
+}
+.l-hide {
+    background-color: rgba(0,155,255,0.5);
+}
+.s-show {
+    background-color: rgba(255,255,0,0.5);
+}

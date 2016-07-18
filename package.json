@@ -1,0 +1,64 @@
+{
+  "name": "MGPT",
+  "version": "0.0.1",
+  "author": {
+    "name": "SapientNitro",
+    "url": "http://sapientnitro.com/"
+  },
+  "homepage": "http://sapientnitro.com/",
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-compress": "~0.5.3",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-requirejs": "~0.4.3",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-githooks": "~0.3.1",
+    "grunt-grunticon": "~1.0.0",
+    "grunt-jsdoc": "^1.0.0",
+    "grunt-svgmin": "~0.3.1",
+    "ink-docstrap": "^0.5.2",
+    "jsdoc": "^3.3.3",
+    "jshint": "~2.5.0",
+    "lodash": "~2.4.1",
+    "ng-annotate": "^0.15.4",
+    "ngmin": "~0.5.0"
+  },
+  "volo": {
+    "baseDir": "library/js/vendor",
+    "dependencies": {
+      "jquery": "github:jquery/jquery/2.0.3",
+      "require": "github:jrburke/requirejs/2.1.9",
+      "require-text": "github:requirejs/text/2.0.10#text.js",
+      "Modernizr": "github:Modernizr/Modernizr/v2.7.2",
+      "angular": "github:angular/angular.js/v1.2.16",
+      "handlebars": "github:components/handlebars.js/v1.3.0#handlebars.amd.js",
+      "lodash.underscore": "github:lodash/lodash/2.4.1#dist/lodash.underscore.js",
+      "picturefill": "github:scottjehl/picturefill/1.2.1",
+      "matchmedia": "github:scottjehl/picturefill/master#src/external/matchmedia.js",
+      "matchMedia.addListener": "github:paulirish/matchMedia.js/master#matchMedia.addListener.js",
+      "ViewportJS": "github:ryanfitzer/ViewportJS/master",
+      "TweenLite": "github:greensock/GreenSock-JS/1.11.8#src/uncompressed/TweenLite.js",
+      "CSSPlugin": "github:greensock/GreenSock-JS/1.11.8#src/uncompressed/plugins/CSSPlugin.js",
+      "hammer": "github:EightMedia/hammer.js/1.1.3",
+      "jquery.validate": "github:jzaefferer/jquery-validation/1.12.0#dist/jquery.validate.js",
+      "easel": "github:createjs/easeljs/master#lib/easeljs-0.7.1.min.js",
+      "bindonce": "github:Pasvaz/bindonce/0.3.3"
+    }
+  },
+  "scripts": {
+    "postinstall": "grunt githooks"
+  },
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-mocha": "^0.2.0",
+    "karma-requirejs": "^0.2.2",
+    "mocha": "^2.3.3",
+    "requirejs": "^2.1.20"
+  }
+}

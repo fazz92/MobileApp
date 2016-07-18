@@ -1,0 +1,75 @@
+<div class="pattern-content">
+<div class="info-block" id="naming">
+    <h1>Naming Conventions</h1>
+    <h2>.element</h2>
+    <p>A <b>root</b> selector that decides the base styles of an element. This selector and its rules must be at the root of the less file, and at the top  (cascading matters)</p>
+</div>
+<div class="code-block"><div class="html-block">
+    <h4>HTML</h4>
+    <pre>
+&lt;a class=&quot;element&quot;&gt;Book A Room&lt;/a&gt;</pre>
+
+</div>
+<div class="less-block">
+    <h4>LESS</h4>
+    <pre>
+.element {
+    //base styles
+}</pre>
+
+</div></div>
+
+<div class="info-block">
+<h2>.element-modifier</h2>
+    <p>A <b>modifier</b> changes the dimensions and details of an element. Its name includes the selector it is extending, and a dash ('-')</p>
+</div>
+<div class="code-block">
+    <div class="html-block">
+    <h4>HTML</h4>
+    <pre>
+&lt;a class=&quot;element-large&quot; href=&quot;#&quot;&gt;Book&lt;/a&gt;
+&lt;a class=&quot;element-medium&quot; href=&quot;#&quot;&gt;A&lt;/a&gt;
+&lt;a class=&quot;element-small&quot; href=&quot;#&quot;&gt;B&lt;/a&gt;</pre>
+</div>
+<div class="less-block">
+    <h4>LESS</h4>
+    <pre>
+.element-large:extend(.btn) {
+    //modifying styles
+}
+.element-medium:extend(.btn) {
+    //modifying styles
+}
+.element-small:extend(.btn) {
+    //modifying styles
+}</pre>
+
+</div></div>
+
+<div class="info-block">
+    <h2>.element style</h2>
+    <p>A <b>style</b> changes the aesthetics of an element, using a semantic selector</p>
+
+</div>
+<div class="code-block"><div class="html-block">
+    <h4>HTML</h4>
+    <pre>
+&lt;a class=&quot;element-large cta&quot; href=&quot;#&quot;&gt;Book&lt;/a&gt;
+&lt;a class=&quot;element-medium cta&quot; href=&quot;#&quot;&gt;H&lt;/a&gt;
+&lt;a class=&quot;element-medium alert&quot; href=&quot;#&quot;&gt;S&lt;/a&gt;</pre>
+</div>
+<div class="less-block">
+    <h4>LESS</h4>
+    <pre>
+.cta {
+    background:@brand-gold-light;
+    color:white;
+}
+.btn-medium.alert {
+    color:white;
+    background:red;
+    border-color:white;
+}</pre>
+
+</div></div>
+</div>
